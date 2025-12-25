@@ -1,0 +1,15 @@
+{
+	"useTabs": true,
+	"tabWidth": 4,
+	"arrowParens": "avoid",
+	"bracketSameLine": true,
+	"bracketSpacing": false,
+	"embeddedLanguageFormatting": "auto",
+	"endOfLine": "lf",
+	"objectWrap": "collapse",
+	"proseWrap": "always",
+	"quoteProps": "consistent",
+	"semi": false,
+	"trailingComma": "none",
+	"singleQuote": false
+}

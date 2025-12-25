@@ -63,16 +63,18 @@ export class Internationalization<T, const Tags extends string = string> {
 	 * @returns A promise that resolves to the best matching source content.
 	 */
 	public resolve = async (...locales: string[]): Promise<Tagged<T, Tags>> => {
-		let max = -Infinity
+		let max = 0
 		let source: Source<Tags, Sync<T> | Async<T>> = this.fallback
 		for (const locale of locales) {
 			for (const s of this.sources) {
-				const score = Number(s.predicate(locale))
+				const score = Math.abs(Number(s.predicate(locale)))
 				if (score > max) {
 					max = score
 					source = s
 				}
 			}
+
+			if (max > 0) break
 		}
 
 		return tag(await source.loader(), source.tag)

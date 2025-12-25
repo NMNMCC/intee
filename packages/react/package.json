@@ -1,24 +1,24 @@
 {
-    "name": "@intee/react",
-    "version": "0.2.0",
-    "type": "module",
-    "scripts": {
-        "build": "tsx ./build.ts"
-    },
-    "exports": {
-        ".": {
-            "import": "./dist/main.mjs",
-            "types": "./dist/main.d.mts"
-        }
-    },
-    "devDependencies": {
-        "@tanstack/react-query": "^5.90.12",
-        "@types/react": "^19.0.0",
-        "react": "^19.0.0"
-    },
-    "peerDependencies": {
-        "@intee/core": "workspace:*",
-        "@tanstack/react-query": "5",
-        "react": ">=18.0.0"
-    }
+	"name": "@intee/react",
+	"version": "0.2.1",
+	"type": "module",
+	"scripts": {
+		"build": "tsx ./build.ts"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/main.mjs",
+			"types": "./dist/main.d.mts"
+		}
+	},
+	"devDependencies": {
+		"@tanstack/react-query": "^5.90.12",
+		"@types/react": "^19.0.0",
+		"react": "^19.0.0"
+	},
+	"peerDependencies": {
+		"@intee/core": "workspace:*",
+		"@tanstack/react-query": "5",
+		"react": ">=18.0.0"
+	}
 }
